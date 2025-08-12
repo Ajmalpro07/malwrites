@@ -1,0 +1,277 @@
+#fullbodybox{
+    position: absolute;
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#titlebar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#titleiconbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #16c79a;
+    height: 45%;
+}
+#titlebar > p{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 25px;
+    border: 0px;
+    font-size: 64px;
+    color: #11698e;
+    font-family: 'borel';
+    text-align: center;
+    text-shadow: 3px 3px 0px #16c79a;
+}
+
+#infobar{
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#infobar > p{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-size: 24px;
+    color: #11698e;
+    font-family: 'outfit';
+    text-align: center;
+    text-shadow: 1px 1px 0px #16c79a;
+}
+
+#gridholder{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+#powergrid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: 300px;
+    grid-auto-flow: row dense;
+    gap: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#powergrid > p{
+    background-color: #11698e;
+}
+
+.card{
+    position: relative;
+    background-color: beige;
+    width: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5fr 4.5fr 0.5fr 10fr 1.5fr;
+
+    padding: 15px;
+    margin: 10px;
+    height: auto;
+
+    text-align: left;
+    text-transform: capitalize;
+
+    grid-row: span 1;
+    grid-column: span 6;
+}
+.card p{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-family: 'outfit';
+}
+.cardtype{
+    font-size: 18px;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+.cardtitle{
+    font-size: 26px;
+}
+.carddate{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.cardbody{
+    font-size: 22px;
+}
+.cardlink{
+    font-size: 18px;
+}
+
+.thought{
+    background-color: #8accd5;
+}
+.thought .cardtype{
+    color: #001bb7;
+}
+
+.idea{
+    background-color: #fed16a;
+}
+.idea .cardtype{
+    color: #ff7601;
+}
+
+.quote{
+    background-color: #bef0cb;
+}
+.quote .cardtype{
+    color: #004030;
+}
+
+.poem{
+    background-color: #ffb3b3;
+}
+.poem .cardtype{
+    color: #9b177e;
+}
+
+.plot{
+    background-color: #ebd6fb;
+}
+.plot .cardtype{
+    color: #5e17eb;
+}
+
+.picture{
+    background-color:darkgray;
+}
+
+.blog{
+    background-color: #fbf3d5;
+}
+.blog .cardtype{
+    color: #d6a99d;
+}
+
+.card:hover{
+    animation-name: pop;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.picture{
+    height: 100%;
+    position: relative;
+    margin: 0px;
+    width: fit-content;
+}
+.picture img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.imgpanel{
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    background-color: black;
+    opacity: 30%;
+}
+.imgtitle{
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: whitesmoke;
+    padding-left: 20px;
+    font-family: 'outfit';
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+@keyframes pop {
+  from {margin: 10px;}
+  to {margin: 0px;}
+}
+
+#footerbar{
+    position: relative;
+    width: 100%;
+    background-color: #16c79a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color:#eff3ea;
+    margin-top: 50px;
+    font-family: 'outfit';
+}
+
+#filterbar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#filterbar p{
+    padding: 0px;
+    margin: 0px;
+}
+#filterbar a{
+    text-decoration: none;
+    color: black;
+}
+.filterbtn{
+    text-transform: uppercase;
+    font-family: 'outfit';
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 10px;
+    color: black;
+    max-width: fit-content;
+}
+
+@media (max-width:1100px){
+    #powergrid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 80%;
+    }
+    .picture{
+        width: 80%;
+        position: relative;
+        margin: 0px;
+        height: fit-content;
+    }
+    .picture img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
