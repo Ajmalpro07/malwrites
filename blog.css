@@ -87,13 +87,14 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+
+    text-transform: capitalize;
 }
 .card p{
     margin: 0px;
     display: flex;
     align-items: center;
     font-family: 'outfit';
-    text-transform:capitalize;
 }
 .cardtype{
     font-size: 18px;
@@ -214,4 +215,5 @@
         font-size: 14px;
     }
 }
+
 
