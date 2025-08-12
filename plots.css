@@ -147,6 +147,7 @@
     color:#eff3ea;
     margin-top: 50px;
     font-family: 'outfit';
+    text-align: center;
 }
 
 #filterbar{
@@ -186,5 +187,39 @@
         align-items: center;
         gap: 10px;
         width: 80%;
+    }
+    .picture{
+        width: 80%;
+        position: relative;
+        margin: 0px;
+        height: fit-content;
+    }
+    .picture img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    #titlebar > p{
+        font-size: 40px;
+        text-shadow: 2px 2px 0px #16c79a;
+    }
+    #titleiconbar{
+        height: 50%;
+    }
+    #infobar > p{
+        margin: 20px;
+        font-size: 20px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .imgtitle{
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    #footerbar{
+        font-size: 14px;
     }
 }
